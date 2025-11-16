@@ -1,0 +1,146 @@
+.hero{
+    height: 1300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+    color: #ffffff;
+    position: relative;
+    background-image: url("../../Assets/images/bg.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    margin-top: 63px; /*este es e espacio que hay para que quede justo debajo del nav*/
+}
+
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-section {
+    flex: 1;
+    align-items: center;
+}
+
+.text-section h1 {
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 72px;
+}
+
+.text-section h1 span {
+    color: #00FF99;
+}
+
+.text-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #c9cbcf;
+    max-width: 500px;
+    margin: 1rem auto 2rem auto; /* Centra la descripción si es más pequeña que el contenedor */
+    font-size: 18px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn-primary {
+    background: #00FF99;
+    border: none;
+    color: #0f111a;
+    padding: 12px 24px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #00b4d8;
+
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1.5px solid #00FF99;
+    color: #00FF99;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #00FF99;
+    color: #0f111a;
+}
+
+
+.feature-grid-container {
+    display: grid;
+    /* Por defecto, dos columnas de igual ancho */
+    grid-template-columns: 1fr 1fr; 
+    gap: 3rem; /* Espacio entre las columnas */
+    max-width: 1200px;
+    width: 90%;
+    padding: 0 2rem;
+    margin-top: 4rem;
+    text-align: left; /* Alineamos el texto a la izquierda dentro de las tarjetas */
+}
+
+.feature-card {
+    padding: 2rem;
+    /* Fondo ligeramente diferente para destacar */
+    background-color: #080808; 
+    border-radius: 12px;
+    border: 1px solid #1a1a1a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.feature-card.left-card h2 span {
+    color: #00FF99;
+}
+
+.feature-card.right-card h2 span {
+    color: #00FF99;
+}
+
+.feature-card h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.feature-subheading {
+    font-size: 1rem;
+    color: #999;
+    margin-bottom: 0;
+}
+
+
+/* --- RESPONSIVIDAD (Para móviles) --- */
+@media (max-width: 768px) {
+    .hero-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .feature-grid-container {
+        /* En pantallas pequeñas, apila las columnas verticalmente */
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .feature-card h2 {
+        font-size: 1.8rem;
+    }
+}
