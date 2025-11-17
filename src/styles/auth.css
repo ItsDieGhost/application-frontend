@@ -37,8 +37,7 @@
   border-color: #00ff99;
 }
 
-/* Botón principal */
-.auth-btn {
+bpm.auth-btn {
   background: #00ff99;
   border: none;
   color: #000;
