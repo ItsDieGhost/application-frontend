@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import "../../../styles/auth.css";
+import "../../../styles/auth.css"
+
 import {
   CButton,
   CCard,
@@ -14,76 +15,112 @@ import {
   CInputGroupText,
   CRow,
 } from '@coreui/react'
+
 import CIcon from '@coreui/icons-react'
 import { cilLockLocked, cilUser } from '@coreui/icons'
 
 const Login = () => {
+
+  useEffect(() => {
+    const script = document.createElement("script")
+    script.src = "https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"
+    onload = () => {
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 50 },
+          color: { value: "#ff0000ff" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5 },
+          size: { value: 7 },
+          move: { speed: 1 }
+        }
+      })
+    }
+    document.body.appendChild(script)
+  }, [])
+
   return (
-    <div className="bg-body-tertiary min-vh-100 d-flex flex-row align-items-center">
+    <div className="auth-bg">
+
+      {/* Fondo animado */}
+      <div id="particles-js"></div>
+
       <CContainer>
         <CRow className="justify-content-center">
           <CCol md={8}>
             <CCardGroup>
-              <CCard className="p-4">
+
+              {/* Formulario */}
+              <CCard className="p-4 auth-card">
                 <CCardBody>
                   <CForm>
-                    <h1>Login</h1>
-                    <p className="text-body-secondary">Sign In to your account</p>
+
+                    <h1 className="auth-title">Iniciar Sesión</h1>
+                    <p className="text-body-secondary">Accede a tu cuenta</p>
+
                     <CInputGroup className="mb-3">
-                      <CInputGroupText>
+                      <CInputGroupText className="auth-input-icon">
                         <CIcon icon={cilUser} />
                       </CInputGroupText>
-                      <CFormInput placeholder="Username" autoComplete="username" />
+                      <CFormInput
+                        placeholder="Correo"
+                        autoComplete="username"
+                        className="auth-input"
+                      />
                     </CInputGroup>
+
                     <CInputGroup className="mb-4">
-                      <CInputGroupText>
+                      <CInputGroupText className="auth-input-icon">
                         <CIcon icon={cilLockLocked} />
                       </CInputGroupText>
                       <CFormInput
                         type="password"
-                        placeholder="Password"
+                        placeholder="Contraseña"
                         autoComplete="current-password"
+                        className="auth-input"
                       />
                     </CInputGroup>
+
                     <CRow>
                       <CCol xs={6}>
-                        <CButton color="primary" className="px-4">
-                          Login
+                        <CButton color="primary" className="px-4 auth-btn">
+                          Entrar
                         </CButton>
                       </CCol>
+
                       <CCol xs={6} className="text-right">
-                        <CButton color="link" className="px-0">
-                          Forgot password?
+                        <CButton color="link" className="px-0 auth-link">
+                          ¿Olvidaste tu contraseña?
                         </CButton>
                       </CCol>
                     </CRow>
                   </CForm>
                 </CCardBody>
               </CCard>
-              <CCard className="text-white bg-primary py-5" style={{ width: '44%' }}>
+
+              {/* Lado derecho */}
+              <CCard className="text-white bg-primary py-5 auth-side">
                 <CCardBody className="text-center">
                   <div>
-                    <h2>Sign up</h2>
+                    <h2>Crear cuenta</h2>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                      tempor incididunt ut labore et dolore magna aliqua.
+                      Únete a MySpot y reserva tu puesto rápidamente.
                     </p>
                     <Link to="/register">
-                      <CButton color="primary" className="mt-3" active tabIndex={-1}>
-                        Register Now!
+                      <CButton color="light" className="mt-3 px-4">
+                        Registrarse
                       </CButton>
                     </Link>
                   </div>
                 </CCardBody>
               </CCard>
+
             </CCardGroup>
           </CCol>
         </CRow>
       </CContainer>
     </div>
-        
   )
 }
 
 export default Login
-  
