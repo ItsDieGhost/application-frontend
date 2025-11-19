@@ -3,7 +3,7 @@
   position: relative;
   min-height: 100vh;
   width: 100%;
-  background: #000;
+  background: #000000;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -16,27 +16,28 @@
   width: 100%;
   height: 100%;
   z-index: 0;
+  filter: blur(4px);
 }
 
 /* CARD del formulario */
 .auth-card {
   background: rgba(15, 15, 15, 0.85);
-  border: 1px solid #00ff88;
+  border: 1px solid #3E3E3E;
   border-radius: 12px;
-  box-shadow: 0 0 18px rgba(0, 255, 136, 0.2);
+  box-shadow: 0 0 18px rgba(96, 105, 101, 0.2);
   backdrop-filter: blur(4px);
   z-index: 2;
 }
 
-/* Lado azul del login */
+/* Lado derechco del login */
 .auth-side {
-  background: linear-gradient(135deg, #006eff, #0044aa);
-  z-index: 2;
+  background: #212121 !important;
+  z-index: 0;
 }
 
 /* Título */
 .auth-title {
-  color: #00ff88;
+  color: #ffffff;
   text-align: center;
   font-weight: bold;
 }
@@ -49,19 +50,19 @@
 }
 
 .auth-input:focus {
-  border-color: #00ff88 !important;
-  box-shadow: 0 0 10px #00ff88 !important;
+  border-color: #ffffff!important;
+  box-shadow: 0 0 10px #ffffff !important;
 }
 
 .auth-input-icon {
   background: #080808 !important;
   border: 1px solid #222 !important;
-  color: #00ff88 !important;
+  color: #ffffff !important;
 }
 
 /* Botón */
 .auth-btn {
-  background: #00ff88 !important;
+  background: #ffffff !important;
   border: none !important;
   color: #000 !important;
   font-weight: bold;
@@ -69,12 +70,12 @@
 }
 
 .auth-btn:hover {
-  background: #00d973 !important;
+  background: #ffffff !important;
 }
 
 /* Links */
 .auth-link {
-  color: #00ff88 !important;
+  color: #ffffff !important;
   font-weight: bold;
 }
 
@@ -83,4 +84,8 @@
 .auth-side {
   position: relative;
   z-index: 2;
+}
+
+.placeholder {
+  color: #ffffff !important;
 }

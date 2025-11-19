@@ -21,16 +21,18 @@ import { cilLockLocked, cilUser } from '@coreui/icons'
 
 const Login = () => {
 
+  // 🎆 Carga dinámica de Particles.js
   useEffect(() => {
     const script = document.createElement("script")
     script.src = "https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"
-    onload = () => {
-      particlesJS("particles-js", {
+    script.async = true
+    script.onload = () => {
+      window.particlesJS("particles-js", {
         particles: {
-          number: { value: 50 },
-          color: { value: "#ff0000ff" },
+          number: { value: 200 },
+          color: { value: "#989898" },
           shape: { type: "circle" },
-          opacity: { value: 0.5 },
+          opacity: { value: 1 },
           size: { value: 7 },
           move: { speed: 1 }
         }

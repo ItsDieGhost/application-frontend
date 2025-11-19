@@ -1,0 +1,73 @@
+/* Fondo con partículas */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Fondo completo del login/register */
+.auth-bg {
+    background-color: #000000;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    position: relative;
+}
+
+/* Contenedor del formulario */
+.auth-card {
+    background: rgba(17, 17, 17, 1) !important;
+    border: 1px solid #0f0;
+    border-radius: 14px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 255, 100, 0.2);
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Títulos */
+.auth-title {
+    color: #00ff99;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+.auth-card .form-control {
+    background: #0d0d0d;
+    border: 1px solid #000000;
+    color: white;
+}
+
+.auth-card .form-control:focus {
+    box-shadow: 0 0 10px #00ff99;
+    border-color: #00ff99;
+}
+
+/* Botón */
+.auth-btn {
+    background: #00ff99;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.auth-btn:hover {
+    background: #00d879;
+}
+
+/* Links */
+.auth-link {
+    color: #00ff99 !important;
+}

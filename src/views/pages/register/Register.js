@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
   CButton,
   CCard,
@@ -15,16 +15,38 @@ import CIcon from '@coreui/icons-react'
 import { cilLockLocked, cilUser } from '@coreui/icons'
 
 const Register = () => {
+  
+  // Cargar ParticlesJS al montar el componente
+  useEffect(() => {
+    const script = document.createElement("script")
+    script.src = "https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"
+    script.onload = () => {
+      window.particlesJS("particles-js", {
+        particles: {
+          number: { value: 300 },
+          color: { value: "#ffffff" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5 },
+          size: { value: 7 },
+          move: { speed: 1 }
+        }
+      })
+    }
+    document.body.appendChild(script)
+  }, [])
+
   return (
-    <div className="bg-body-tertiary min-vh-100 d-flex flex-row align-items-center">
-      <CContainer>
+    <div className="auth-bg">
+      <div id="particles-js"></div>
+
+      <CContainer className="position-relative">
         <CRow className="justify-content-center">
           <CCol md={9} lg={7} xl={6}>
-            <CCard className="mx-4">
+            <CCard className="auth-card">
               <CCardBody className="p-4">
                 <CForm>
-                  <h1>Register</h1>
-                  <p className="text-body-secondary">Create your account</p>
+                  <h1 className="auth-title">Crear Cuenta</h1>
+
                   <CInputGroup className="mb-3">
                     <CInputGroupText>
                       <CIcon icon={cilUser} />
@@ -56,7 +78,7 @@ const Register = () => {
                     />
                   </CInputGroup>
                   <div className="d-grid">
-                    <CButton color="success">Create Account</CButton>
+                    <button className="auth-btn">Crear Cuenta</button>
                   </div>
                 </CForm>
               </CCardBody>
