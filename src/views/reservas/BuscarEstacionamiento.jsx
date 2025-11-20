@@ -1,12 +1,19 @@
 import React from 'react'
-import { CCard, CCardBody, CCardHeader } from "@coreui/react"
+import { CCard, CCardBody, CFormInput, CButton } from '@coreui/react'
 
 const BuscarEstacionamiento = () => {
   return (
     <CCard>
-      <CCardHeader>Buscar Estacionamiento</CCardHeader>
       <CCardBody>
-        <p>Aquí irá el mapa, lista de estacionamientos, filtros, etc.</p>
+        <h3>Buscar Estacionamiento</h3>
+        <p>Ingresa tu ubicación o permite el GPS.</p>
+
+        <CFormInput placeholder="Dirección o lugar" className="mb-3" />
+        <CButton color="success">Buscar</CButton>
+
+        <div className="mt-4" style={{ height: '400px', background: '#222', borderRadius: '10px' }}>
+          <h5 className="text-center text-light mt-5">Aquí irá Google Maps 😎</h5>
+        </div>
       </CCardBody>
     </CCard>
   )

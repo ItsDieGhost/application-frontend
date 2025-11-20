@@ -1,12 +1,14 @@
-import React from "react"
-import { CCard, CCardHeader, CCardBody } from "@coreui/react"
+import React from 'react'
+import { CCard, CCardBody, CButton } from '@coreui/react'
 
 const SeleccionarEspacio = () => {
   return (
     <CCard>
-      <CCardHeader>Seleccionar Espacio</CCardHeader>
       <CCardBody>
-        <p>Lista de espacios disponibles / selector de puestos.</p>
+        <h3>Seleccionar Espacio</h3>
+        <p>Elige una plaza disponible.</p>
+
+        <CButton color="primary">Confirmar Selección</CButton>
       </CCardBody>
     </CCard>
   )

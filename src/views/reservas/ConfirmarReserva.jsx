@@ -1,12 +1,13 @@
-import React from "react"
-import { CCard, CCardHeader, CCardBody, CButton } from "@coreui/react"
+import React from 'react'
+import { CCard, CCardBody, CButton } from '@coreui/react'
 
 const ConfirmarReserva = () => {
   return (
     <CCard>
-      <CCardHeader>Confirmar Reserva</CCardHeader>
       <CCardBody>
-        <p>Detalle final de la reserva antes de confirmar.</p>
+        <h3>Confirmar Reserva</h3>
+        <p>Verifica los datos antes de reservar.</p>
+
         <CButton color="success">Confirmar</CButton>
       </CCardBody>
     </CCard>

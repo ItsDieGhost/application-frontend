@@ -29,17 +29,37 @@ const _nav = [
     component: CNavTitle,
     name: 'Apps',
   },
-  {
-    component: CNavGroup,
-    name: 'Reservar',
-    to: '/base',
-    icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
-    items: [
-      
-    ],
-  },
+{
+  component: CNavGroup,
+  name: 'Reservar',
+  to: '/reservas',
+  icon: <CIcon icon={cilCursor} customClassName="nav-icon" />,
 
-  
+  items: [
+    {
+      component: CNavItem,
+      name: 'Buscar Estacionamiento',
+      to: '/reservas/buscar',
+    },
+    {
+      component: CNavItem,
+      name: 'Seleccionar Espacio',
+      to: '/reservas/seleccionar',
+    },
+    {
+      component: CNavItem,
+      name: 'Confirmar Reserva',
+      to: '/reservas/confirmar',
+    },
+    {
+      component: CNavItem,
+      name: 'Historial de Reservas',
+      to: '/reservas/historial',
+    },
+  ],
+}
+
+
 ]
 
 export default _nav
