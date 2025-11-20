@@ -1,0 +1,5 @@
+export { default as ReservaInicio } from "./ReservaInicio"
+export { default as BuscarEstacionamiento } from "./BuscarEstacionamiento"
+export { default as SeleccionarEspacio } from "./SeleccionarEspacio"
+export { default as ConfirmarReserva } from "./ConfirmarReserva"
+export { default as HistorialReservas } from "./HistorialReservas"

@@ -1,10 +1,11 @@
 import React from 'react'
 
 const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
-const Login = React.lazy(() => import('./views/login/Login'))
 const Colors = React.lazy(() => import('./views/theme/colors/Colors'))
 const Typography = React.lazy(() => import('./views/theme/typography/Typography'))
 const Landing = React.lazy(() => import('./views/landing/Landing'))
+const Login = React.lazy(() => import('./views/pages/login/Login'))
+
 
 
 // Base
