@@ -12,7 +12,7 @@ const BuscarEstacionamiento = () => {
         <CButton color="success">Buscar</CButton>
 
         <div className="mt-4" style={{ height: '400px', background: '#222', borderRadius: '10px' }}>
-          <h5 className="text-center text-light mt-5">Aquí irá Google Maps 😎</h5>
+          <h5 className="text-center text-light mt-5">Mapa de google</h5>
         </div>
       </CCardBody>
     </CCard>

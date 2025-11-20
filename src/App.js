@@ -19,6 +19,7 @@ import BuscarEstacionamiento from './views/reservas/BuscarEstacionamiento'
 import SeleccionarEspacio from './views/reservas/SeleccionarEspacio'
 import ConfirmarReserva from './views/reservas/ConfirmarReserva'
 import HistorialReservas from './views/reservas/HistorialReservas'
+import Perfil from './views/pages/perfil/Perfil'
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path="/reservas/seleccionar" element={<SeleccionarEspacio />} />
           <Route path="/reservas/confirmar" element={<ConfirmarReserva />} />
           <Route path="/reservas/historial" element={<HistorialReservas />} />
+          <Route path="/perfil" element={<Perfil />} /> 
         </Route>
 
       </Routes>
