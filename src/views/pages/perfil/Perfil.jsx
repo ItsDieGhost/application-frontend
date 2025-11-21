@@ -18,6 +18,7 @@ export default function Perfil() {
     email: 'juan.perez@email.com',
     role: 'Conductor',
     avatar: null, // data URL
+    bio: 'algo acerca de ti'
   })
   const [editing, setEditing] = useState(false)
 

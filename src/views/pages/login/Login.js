@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import "../../../styles/auth.css"
 
 import {
-  CButton,
+  CButton,  
   CCard,
   CCardBody,
   CCardGroup,
@@ -21,7 +21,15 @@ import { cilLockLocked, cilUser } from '@coreui/icons'
 
 const Login = () => {
 
-  // 🎆 Carga dinámica de Particles.js
+  const navigate = useNavigate()
+
+  // Estados para manejar el login
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [error, setError] = useState("")
+  
+
+  
   useEffect(() => {
     const script = document.createElement("script")
     script.src = "https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"
@@ -41,10 +49,28 @@ const Login = () => {
     document.body.appendChild(script)
   }, [])
 
+
+  const handleLogin = () => {
+    const savedUser = JSON.parse(localStorage.getItem("myspot_user"))
+
+
+    if (!savedUser) {
+      setError("No existe un usuario registrado. Crea una cuenta primero.")
+      return
+    }
+
+    // Validar credenciales
+    if (email === savedUser.email && password === savedUser.password) {
+      localStorage.setItem("myspot_logged", "true") // Marca sesión iniciada
+      navigate("/dashboard")
+    } else {
+      setError("Correo o contraseña incorrectos.")
+    }
+  }
+
   return (
     <div className="auth-bg">
 
-      {/* Fondo animado */}
       <div id="particles-js"></div>
 
       <CContainer>
@@ -68,6 +94,8 @@ const Login = () => {
                         placeholder="Correo"
                         autoComplete="username"
                         className="auth-input"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                       />
                     </CInputGroup>
 
@@ -80,12 +108,25 @@ const Login = () => {
                         placeholder="Contraseña"
                         autoComplete="current-password"
                         className="auth-input"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                       />
                     </CInputGroup>
 
+                    {/* Mensaje de error */}
+                    {error && (
+                      <p style={{ color: "red", marginBottom: "10px" }}>
+                        {error}
+                      </p>
+                    )}
+
                     <CRow>
                       <CCol xs={6}>
-                        <CButton color="primary" className="px-4 auth-btn">
+                        <CButton 
+                          color="primary" 
+                          className="px-4 auth-btn"
+                          onClick={handleLogin}
+                        >
                           Entrar
                         </CButton>
                       </CCol>
