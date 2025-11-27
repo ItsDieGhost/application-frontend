@@ -16,8 +16,14 @@ import {
   cilStar,
 } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
+import './css_nav.js/style._nav.js.css' 
 
 const _nav = [
+
+  {
+    component: CNavTitle,
+    name: 'Administrador',
+  },
 
   {
     component: CNavItem,
@@ -83,8 +89,9 @@ const _nav = [
 
   {
     component: CNavItem,
-    name: 'Buscar Estacionamiento',
+    name: 'Reservacion',
     to: '/reservas/buscar',
+    icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
   },
       
 

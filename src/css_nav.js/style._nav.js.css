@@ -1,0 +1,80 @@
+.sidebar {
+
+background-color: #222222;
+box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+transition: width 0.3s ease-in-out;
+}
+
+
+.nav-title {
+color: #bdc3c7; 
+font-size: 0.75rem;
+padding: 1.5rem 1rem 0.5rem 1rem;
+text-transform: uppercase;
+font-weight: 700;
+}
+
+
+.nav-link {
+color: #ecf0f1; 
+transition: background-color 0.2s, color 0.2s;
+padding: 0.75rem 1rem;
+display: flex;
+align-items: center;
+}
+
+.nav-link:hover {
+color: #ffffff;
+background-color: #2ecc71; 
+}
+
+.nav-link.active {
+color: #ffffff;
+background-color: #2ecc71;
+  border-left: 4px solid #00E599; /* Línea de acento amarilla/dorada */
+font-weight: 600;
+padding-left: calc(1rem - 4px);
+}
+
+/* 4. Estilos para los Íconos (clase personalizada "nav-icon" en tu JS) */
+.nav-icon {
+margin-right: 0.75rem;
+font-size: 1.2rem;
+  color: #c9caca; /* Gris claro para los íconos inactivos */
+transition: color 0.2s;
+}
+
+/* Color del ícono en el estado activo */
+.nav-link.active .nav-icon {
+color: #ffffff;
+}
+
+/* Submenús / .nav-group-items */
+.nav-group-items {
+  background-color: #25a55b; /* Un verde ligeramente más oscuro para el submenú */
+}
+
+.nav-group-items .nav-link {
+  padding-left: 2.5rem; /* Indentación para subelementos */
+color: #bdc3c7;
+}
+
+.nav-group-items .nav-link:hover {
+background-color: #239c56;
+}
+
+.nav-group-items .nav-link.active {
+background-color: #2ecc71;
+border-left: none;
+}
+
+.badge {
+  margin-left: auto; /* Mueve el badge a la derecha */
+font-size: 0.65rem;
+line-height: 1;
+}
+
+/* Color específico para badge 'PRO' (color danger) */
+.badge.bg-danger {
+    background-color: #e74c3c !important; /* Rojo intenso */
+}
