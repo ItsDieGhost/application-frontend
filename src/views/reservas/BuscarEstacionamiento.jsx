@@ -127,7 +127,6 @@ const BuscarEstacionamiento = () => {
               zoom={14}
               mapContainerStyle={{ width: "100%", height: "100%" }}>
               {directions && <DirectionsRenderer directions={directions} />}
-
             </GoogleMap>
         </LoadScript>
       </div>

@@ -18,6 +18,7 @@ import {
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 
 const _nav = [
+
   {
     component: CNavItem,
     name: 'Main',
@@ -26,45 +27,66 @@ const _nav = [
   },
 
   {
-    component: CNavTitle,
-    name: 'Apps',
-  },
-
-{
-  component: CNavGroup,
-  name: 'Reservar',
-  to: '/reservas',
-  icon: <CIcon icon={cilCursor} customClassName="nav-icon" />,
-
-  items: [
-    {
-      component: CNavItem,
-      name: 'Buscar Estacionamiento',
-      to: '/reservas/buscar',
-    },
-    {
-      component: CNavItem,
-      name: 'Seleccionar Espacio',
-      to: '/reservas/seleccionar',
-    },
-    {
-      component: CNavItem,
-      name: 'Confirmar Reserva',
-      to: '/reservas/confirmar',
-    },
-    {
-      component: CNavItem,
-      name: 'Historial de Reservas',
-      to: '/reservas/historial',
-    },
-      
-  ],
-},
-{
   component: CNavItem,
   name: 'Perfil',
   to: '/perfil',
-},
+  icon: <CIcon icon={cilUser} customClassName="nav-icon" />,
+  },
+
+    {
+    component: CNavItem,
+    name: 'Reporte',
+    to: '/reporte',
+    icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
+  },
+
+  {
+  component: CNavItem,
+  name: 'Estadísticas',
+  to: '/estadisticas',
+  icon: <CIcon icon={cilChartPie} customClassName="nav-icon" />,
+  },
+
+  {
+    component: CNavTitle,
+    name: 'Vigilante',
+  },
+  {
+    component: CNavItem,
+    name: 'Facturas',
+    to: '/facturas',
+    icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Incidentes',
+    to: '/incidentes',
+    icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Encuesta / Planilla',
+    to: '/encuesta',
+    icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Transacciones',
+    to: '/transacciones',
+    icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
+  },
+
+  {
+    component: CNavTitle,
+    name: 'Conductor',
+  },
+
+  {
+    component: CNavItem,
+    name: 'Buscar Estacionamiento',
+    to: '/reservas/buscar',
+  },
+      
 
 
 ]

@@ -7,7 +7,6 @@ const Landing = React.lazy(() => import('./views/landing/Landing'))
 const Login = React.lazy(() => import('./views/pages/login/Login'))
 
 
-
 // Base
 const Accordion = React.lazy(() => import('./views/base/accordion/Accordion'))
 const Breadcrumbs = React.lazy(() => import('./views/base/breadcrumbs/Breadcrumbs'))

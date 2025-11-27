@@ -14,11 +14,7 @@ import Register from './views/pages/register/Register'
 import Dashboard from './views/dashboard/Dashboard'
 
 // Vistas de reservas (IMPORTANTE)
-import ReservaInicio from './views/reservas/ReservaInicio'
 import BuscarEstacionamiento from './views/reservas/BuscarEstacionamiento'
-import SeleccionarEspacio from './views/reservas/SeleccionarEspacio'
-import ConfirmarReserva from './views/reservas/ConfirmarReserva'
-import HistorialReservas from './views/reservas/HistorialReservas'
 import Perfil from './views/pages/perfil/Perfil'
 
 function App() {
@@ -34,11 +30,7 @@ function App() {
         {/* Rutas internas */}
         <Route element={<DefaultLayout />}>
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/reservas" element={<ReservaInicio />} />
           <Route path="/reservas/buscar" element={<BuscarEstacionamiento />} />
-          <Route path="/reservas/seleccionar" element={<SeleccionarEspacio />} />
-          <Route path="/reservas/confirmar" element={<ConfirmarReserva />} />
-          <Route path="/reservas/historial" element={<HistorialReservas />} />
           <Route path="/perfil" element={<Perfil />} /> 
         </Route>
 
