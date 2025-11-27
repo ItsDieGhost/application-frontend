@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import "./App.css"
 
 // Layout CoreUI
@@ -16,6 +16,7 @@ import Dashboard from './views/dashboard/Dashboard'
 // Vistas de reservas (IMPORTANTE)
 import BuscarEstacionamiento from './views/reservas/BuscarEstacionamiento'
 import Perfil from './views/pages/perfil/Perfil'
+import Reporte from './views/pages/reporte/Reporte';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/reservas/buscar" element={<BuscarEstacionamiento />} />
           <Route path="/perfil" element={<Perfil />} /> 
+          <Route path="/reporte" element={<Reporte />} />
         </Route>
 
       </Routes>
