@@ -17,6 +17,11 @@ import Dashboard from './views/dashboard/Dashboard'
 import BuscarEstacionamiento from './views/reservas/BuscarEstacionamiento'
 import Perfil from './views/pages/perfil/Perfil'
 import Reporte from './views/pages/reporte/Reporte';
+import Estadisticas from './views/pages/estadisticas/Estadisticas';
+import Facturas from './views/pages/facturas/Facturas';
+import Incidentes from './views/pages/incidentes/Incidentes';
+import Encuesta from './views/pages/encuesta/Encuesta';
+import Transacciones from './views/pages/transacciones/Transacciones';
 
 function App() {
   return (
@@ -34,6 +39,11 @@ function App() {
           <Route path="/reservas/buscar" element={<BuscarEstacionamiento />} />
           <Route path="/perfil" element={<Perfil />} /> 
           <Route path="/reporte" element={<Reporte />} />
+          <Route path="/estadisticas" element={<Estadisticas />} />
+          <Route path="/facturas" element={<Facturas />} />
+          <Route path="/incidentes" element={<Incidentes />} />
+          <Route path="/encuesta" element={<Encuesta />} />
+          <Route path="/transacciones" element={<Transacciones />} />
         </Route>
 
       </Routes>

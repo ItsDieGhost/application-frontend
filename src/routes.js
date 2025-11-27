@@ -8,7 +8,6 @@ const Login = React.lazy(() => import('./views/pages/login/Login'))
 
 
 // Base
-const Reporte = React.lazy(() => import('./views/pages/reporte/Reporte'))
 const Accordion = React.lazy(() => import('./views/base/accordion/Accordion'))
 const Breadcrumbs = React.lazy(() => import('./views/base/breadcrumbs/Breadcrumbs'))
 const Cards = React.lazy(() => import('./views/base/cards/Cards'))
@@ -105,7 +104,7 @@ const routes = [
   { path: '/login', name: 'Login', element: Login },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
   { path: '/', exact: true, name: 'Landing', element: Landing },
-  { path: '/reporte', name: 'Reporte', element: Reporte },
+  
 
 ]
 
