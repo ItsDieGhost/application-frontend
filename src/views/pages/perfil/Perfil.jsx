@@ -23,7 +23,7 @@ export default function Perfil() {
   useEffect(() => {
     try {
       localStorage.setItem(LOCAL_KEY, JSON.stringify(profile))
-      // Emitir evento para notificar a otros componentes (ej.: header) que el perfil cambió
+      // Emitir evento para notificar a otros componentes  que el perfil cambió
       try {
         window.dispatchEvent(new CustomEvent('profile-updated', { detail: profile }))
       } catch (e) {

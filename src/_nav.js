@@ -71,7 +71,7 @@ const _nav = [
   },
   {
     component: CNavItem,
-    name: 'Encuesta / Planilla',
+    name: 'Estadistica de reportes',
     to: '/encuesta',
     icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
   },

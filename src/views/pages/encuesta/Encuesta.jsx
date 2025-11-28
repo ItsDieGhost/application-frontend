@@ -8,7 +8,7 @@ export default function Encuesta(){
 
     return (
     <div className="container">
-        <h2>Encuesta y Planilla</h2>
+        <h2>Estadisticas de reportes</h2>
         <p>Resumen rápido de estadísticas y últimos incidentes.</p>
         <div className="row">
         <div className="col-md-6 card p-3">
