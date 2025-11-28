@@ -13,6 +13,7 @@ import {
   cilPuzzle,
   cilSpeedometer,
   cilStar,
+  cilNotes
 } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 import './css_nav.js/style._nav.js.css' 
@@ -59,7 +60,7 @@ const _nav = [
   {
     component: CNavItem,
     name: 'Facturas',
-    to: '/factura',
+    to: '/facturas',
     icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
   },
   {

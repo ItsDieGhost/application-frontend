@@ -45,7 +45,6 @@ function App() {
           <Route path="/encuesta" element={<Encuesta />} />
           <Route path="/transacciones" element={<Transacciones />} />
         </Route>
-
       </Routes>
     </BrowserRouter>
   )

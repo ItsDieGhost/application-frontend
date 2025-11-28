@@ -7,10 +7,10 @@ import '@coreui/icons/css/free.min.css';
 
 
 import App from './App'
-import store from './store'
+import Store from './store'
 
 createRoot(document.getElementById('root')).render(
-  <Provider store={store}>
+  <Provider store={Store}>
     <App />
   </Provider>,
 )
