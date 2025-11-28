@@ -15,7 +15,7 @@ import {
   cilStar,
   cilNotes
 } from '@coreui/icons'
-import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
+import { CNavGroup, CNavTitle } from '@coreui/react'
 import './css_nav.js/style._nav.js.css' 
 
 const _nav = [
@@ -35,7 +35,6 @@ const _nav = [
   {
   component: CNavItem,
   name: 'Perfil',
-  to: '/perfil',
   icon: <CIcon icon={cilUser} customClassName="nav-icon" />,
   },
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 
 const LOCAL_KEY = 'app_profil'
 
@@ -24,7 +24,7 @@ export default function Perfil() {
     try {
       localStorage.setItem(LOCAL_KEY, JSON.stringify(profile))
       // Emitir evento para notificar a otros componentes  que el perfil cambió
-      try {
+      try
         window.dispatchEvent(new CustomEvent('profile-updated', { detail: profile }))
       } catch (e) {
         // no crítico
