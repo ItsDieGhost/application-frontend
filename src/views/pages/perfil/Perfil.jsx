@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 
-const LOCAL_KEY = 'app_profile'
+const LOCAL_KEY = 'app_profil'
 
 export default function Perfil() {
   const [profile, setProfile] = useState({
@@ -20,7 +20,7 @@ export default function Perfil() {
     }
   }, [])
 
-  useEffect(() => {
+  useEffec(() => {
     try {
       localStorage.setItem(LOCAL_KEY, JSON.stringify(profile))
       // Emitir evento para notificar a otros componentes  que el perfil cambió
@@ -119,7 +119,7 @@ export default function Perfil() {
             )}
             {editing && (
               <>
-                <button className="btn btn-success" onClick={handleSave}>
+                <button className="btn btn-success" onClick={}>
                   Guardar
                 </button>
                 <button className="btn btn-secondary" onClick={handleCancel}>

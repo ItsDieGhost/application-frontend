@@ -13,7 +13,7 @@ import Register from './views/pages/register/Register'
 // Dashboard
 import Dashboard from './views/dashboard/Dashboard'
 
-// Vistas de reservas (IMPORTANTE)
+// vistas de pages
 import BuscarEstacionamiento from './views/reservas/BuscarEstacionamiento'
 import Perfil from './views/pages/perfil/Perfil'
 import Reporte from './views/pages/reporte/Reporte';
@@ -28,12 +28,12 @@ function App() {
     <BrowserRouter>
       <Routes>
 
-        {/* Rutas públicas */}
+        {/* rutas dl landingggg */}
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
-        {/* Rutas internas */}
+        {/* rutas internas de pagess*/}
         <Route element={<DefaultLayout />}>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/reservas/buscar" element={<BuscarEstacionamiento />} />

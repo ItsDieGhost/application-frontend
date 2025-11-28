@@ -9,7 +9,6 @@ import {
   cilDescription,
   cilDrop,
   cilExternalLink,
-  cilNotes,
   cilPencil,
   cilPuzzle,
   cilSpeedometer,
@@ -60,7 +59,7 @@ const _nav = [
   {
     component: CNavItem,
     name: 'Facturas',
-    to: '/facturas',
+    to: '/factura',
     icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
   },
   {
