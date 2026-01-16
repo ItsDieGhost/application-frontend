@@ -19,8 +19,10 @@ function addOrUpdate(e){
     if(editingId){
     setIncidentes(prev => prev.map(it => it.id === editingId ? { ...it, ...form, id: editingId } : it))
     setEditingId(null)
+    alert('El incidente ha sido actualizado correctamente.') // Confirmación visual
     } else {
     const id = Date.now(); setIncidentes(i => [{id, ...form}, ...i])
+    alert('El incidente ha sido registrado correctamente.') // Confirmación visual
     }
     setForm({ fecha:'', placa:'', nombre:'', descripcion:'', gravedad:'Baja' })
 }
