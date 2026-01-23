@@ -1,11 +1,15 @@
 import React from 'react'
+import EncuestaAgregarPersonal from './views/agregarpersonal/EncuestaAgregarPersonal'
+import PersonalActivo from './views/agregarpersonal/PersonalActivo'
 
 const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
 const Colors = React.lazy(() => import('./views/theme/colors/Colors'))
 const Typography = React.lazy(() => import('./views/theme/typography/Typography'))
 const Landing = React.lazy(() => import('./views/landing/Landing'))
 const Login = React.lazy(() => import('./views/pages/login/Login'))
-
+const RegistroDeVeiculos = React.lazy(
+  () => import('./views/pages/registro de veiculo/Registro_de_veiculos'),
+)
 
 // Base
 const Accordion = React.lazy(() => import('./views/base/accordion/Accordion'))
@@ -14,7 +18,7 @@ const Cards = React.lazy(() => import('./views/base/cards/Cards'))
 const Carousels = React.lazy(() => import('./views/base/carousels/Carousels'))
 const Collapses = React.lazy(() => import('./views/base/collapses/Collapses'))
 const ListGroups = React.lazy(() => import('./views/base/list-groups/ListGroups'))
-const Navs = React.lazy(() => import('./views/base/navs/Navs')) 
+const Navs = React.lazy(() => import('./views/base/navs/Navs'))
 const Paginations = React.lazy(() => import('./views/base/paginations/Paginations'))
 const Placeholders = React.lazy(() => import('./views/base/placeholders/Placeholders'))
 const Popovers = React.lazy(() => import('./views/base/popovers/Popovers'))
@@ -104,8 +108,6 @@ const routes = [
   { path: '/login', name: 'Login', element: Login },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
   { path: '/', exact: true, name: 'Landing', element: Landing },
-  
-
 ]
 
 export default routes

@@ -13,13 +13,12 @@ import {
   cilPuzzle,
   cilSpeedometer,
   cilStar,
-  cilNotes
+  cilNotes,
 } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
-import './css_nav.js/style._nav.js.css' 
+import './css_nav.js/style._nav.js.css'
 
 const _nav = [
-
   {
     component: CNavTitle,
     name: 'Administrador',
@@ -33,13 +32,13 @@ const _nav = [
   },
 
   {
-  component: CNavItem,
-  name: 'Perfil',
-  to: '/perfil',
-  icon: <CIcon icon={cilUser} customClassName="nav-icon" />,
+    component: CNavItem,
+    name: 'Perfil',
+    to: '/perfil',
+    icon: <CIcon icon={cilUser} customClassName="nav-icon" />,
   },
 
-    {
+  {
     component: CNavItem,
     name: 'Reporte',
     to: '/reporte',
@@ -47,10 +46,29 @@ const _nav = [
   },
 
   {
-  component: CNavItem,
-  name: 'Estadísticas',
-  to: '/estadisticas',
-  icon: <CIcon icon={cilChartPie} customClassName="nav-icon" />,
+    component: CNavItem,
+    name: 'Estadísticas',
+    to: '/estadisticas',
+    icon: <CIcon icon={cilChartPie} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavGroup,
+    name: 'Gestión de Personal',
+    icon: <CIcon icon={cilUser} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Agregar Personal',
+        to: '/agregar-personal',
+        icon: <CIcon icon={cilUser} customClassName="nav-icon" />,
+      },
+      {
+        component: CNavItem,
+        name: 'Personal Activo',
+        to: '/personal-activo',
+        icon: <CIcon icon={cilUser} customClassName="nav-icon" />,
+      },
+    ],
   },
 
   {
@@ -93,9 +111,13 @@ const _nav = [
     to: '/reservas/buscar',
     icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
   },
-      
 
-
+  {
+    component: CNavItem,
+    name: 'Registrar vehículo',
+    to: '/registro-veiculos', // Corregido para coincidir con la ruta en routes.js
+    icon: <CIcon icon={cilCalculator} customClassName="nav-icon" />,
+  },
 ]
 
 export default _nav
